@@ -1,0 +1,76 @@
+:root {
+    --skew: 3deg;
+    --skew-neg: -3deg;
+    --margen-general: 20px;
+}
+
+.triangulos > div > div {
+    position: relative;
+    z-index: 1;
+    margin: var(--margen-general) 0;
+    padding: 20px;
+}
+
+.triangulos > div:nth-child(even) > div:before,
+.triangulos > div:nth-child(even) > div:after {
+    background: inherit;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden;
+}
+
+.triangulos > div:nth-child(even) > div:before {
+    top: 0;
+    -webkit-transform: skewY(var(--skew));
+    transform: skewY(var(--skew));
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.triangulos > div:nth-child(even) > div:after {
+    bottom: 0;
+    -webkit-transform: skewY(var(--skew-neg));
+    transform: skewY(var(--skew-neg));
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+}
+
+.triangulos > div:nth-child(odd) > div:before,
+.triangulos > div:nth-child(odd) > div:after {
+    background: inherit;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    -webkit-backface-visibility: hidden;
+}
+
+.triangulos > div:nth-child(odd) > div:before {
+    top: 0;
+    -webkit-transform: skewY(var(--skew-neg));
+    transform: skewY(var(--skew-neg));
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 0;
+}
+
+.triangulos > div:nth-child(odd) > div:after {
+    bottom: 0;
+    -webkit-transform: skewY(var(--skew));
+    transform: skewY(var(--skew));
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+html, body {
+    min-height: 100vh;
+}

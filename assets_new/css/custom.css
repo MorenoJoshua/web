@@ -1,0 +1,143 @@
+body, html {
+    min-height: 100vh;
+    color: #3c3c3c;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #e6e6e6;
+}
+
+html {
+    background: #b9b9b9;
+}
+
+.eyg-header {
+    font-size: calc(2.2em + 1.5vw);
+    min-font-size: 40px;
+    padding: 6vh 0 1em 0;
+    font-weight: 600;
+
+}
+
+.eyg-header::before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 1.3em;
+    border-bottom: 0.1em solid rgb(235, 111, 49);
+    margin-bottom: 0.1em;
+}
+
+.producto {
+    margin-bottom: 2em;
+}
+
+.producto-thumb {
+    margin-bottom: 3em;
+}
+
+.producto-footer {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 900 !important;
+}
+
+.producto > div {
+    margin-bottom: 1em;
+}
+
+.producto::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.producto > div:last-child::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 1.4em;
+    border-bottom: 0.15em solid rgb(235, 111, 49);
+    margin-bottom: 1em;
+    margin-top: 0.7em;
+}
+
+.thumbnal-overlay-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(80, 80, 80, 0.75);
+    color: #ffffff;
+}
+
+.thumbnal-overlay-footer.venta {
+    background: rgba(49, 49, 235, .75) !important
+}
+
+footer {
+    font-weight: 100;
+    color: rgb(181, 181, 181);
+    background: #313131;
+    margin-top: 2.5em;
+}
+
+footer > .footer-copy {
+    background: #484848;
+    font-size: 0.9em;
+    /*padding-top: 2em !important;*/
+    /*padding-bottom: 6em !important;*/
+}
+
+footer > .footer-main {
+    /*padding-top: 10em !important;*/
+    /*padding-bottom: 4em !important;*/
+}
+
+.footer-contacto > i.fa {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.9em;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    color: rgba(49, 49, 235, .75);
+    margin-right: 0.4em;;
+}
+
+.footer-contacto {
+    font-size: 0.9em;
+}
+
+.incognito {
+    color: inherit;
+}
+
+.vcenter {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.modal-imagen {
+    width: 80vw !important;
+    max-width: 700px;
+}
+
+.hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 40% !important;
+    height: 1px !important;
+    background: rgba(49, 49, 235, .75);;
+}
